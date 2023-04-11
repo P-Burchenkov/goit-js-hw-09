@@ -26,7 +26,7 @@ function OnstopBtnClick(evt) {
  };
 
 function changeColor() {    
-    bodyEl.style.backgroundColor = getRandomHexColor();
+    refs.bodyEl.style.backgroundColor = getRandomHexColor();
 }
 
 function getRandomHexColor() {
