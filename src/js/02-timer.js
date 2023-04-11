@@ -72,8 +72,8 @@ function addLeadingZero(value) {
 }
 
 function stopCountTime(id) {
-  if (dif <= 0) clearInterval(id);
+    const timeData = convertMs(dif);
+    if (timeData.days === 0 && timeData.hours === 0 && timeData.minutes === 0 && timeData.seconds === 0) clearInterval(id);
 }
 
-// Задать переменные выбраного времени и текущего времени
-//
+
