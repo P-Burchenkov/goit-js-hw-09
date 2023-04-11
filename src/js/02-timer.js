@@ -20,8 +20,8 @@ const options = {
     selectedDate = selectedDates[0];
     const difference = selectedDates[0] - Date.now();
     if (difference <= 0) {
-        window.alert('Please choose a date in the future');
-        return;
+      window.alert('Please choose a date in the future');
+      return;
     } else {
       refs.btn.disabled = false;
     }
@@ -62,7 +62,7 @@ function countTime() {
   stopCountTime(timerId);
   const timeData = convertMs(dif);
   refs.dayVal.textContent = addLeadingZero(timeData.days);
-  refs.dayVal.textContent = addLeadingZero(timeData.hours);
+  refs.hoursVal.textContent = addLeadingZero(timeData.hours);
   refs.minutesVal.textContent = addLeadingZero(timeData.minutes);
   refs.secondsVal.textContent = addLeadingZero(timeData.seconds);
 }
@@ -72,7 +72,7 @@ function addLeadingZero(value) {
 }
 
 function stopCountTime(id) {
-  if (dif <= 1000) clearInterval(id);
+  if (dif <= 0) clearInterval(id);
 }
 
 // Задать переменные выбраного времени и текущего времени
